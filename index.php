@@ -2,7 +2,7 @@
   $servername = "bgmndrlz7ef9djdqxyfg-mysql.services.clever-cloud.com";
   $username = "uuibjej9e6w3n7as";
   $password = "yM1BD2Cw46IRCe89uYls";
-  $db_name = "bgmndrlz7ef9djdqxyfg";
+  $dbname = "bgmndrlz7ef9djdqxyfg";
   // Create connection
   $conn = new mysqli($servername, $username, $password, $dbname);
 
