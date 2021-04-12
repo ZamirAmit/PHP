@@ -29,7 +29,7 @@
       echo "user: " . $row["users"]. "amount: " . $row["amount"] . "<br>";
     }
   } else {
-    echo "0 results";
+    echo "0 results from: " ."<br>" . $sql;
   }
   $conn->close();
   echo "Connection closed!";
