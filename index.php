@@ -12,13 +12,22 @@
   }
   echo "Connected successfully";
   echo "<br>";
-  $sql = "SELECT UserName FROM users";
+  $sql = "SELECT `users`.`UserName`, " . 
+    "sum(`sum`) AS amount" .
+    "FROM `TABLE 3`, " .
+    "`users` " . 
+    "WHERE `date` " .
+    "BETWEEN @start_date " .
+    "AND @end_date  " . 
+    "AND `users`.`UserID` = `TABLE 3`.`user` . 
+    "GROUP BY `user`";
+
   $result = $conn->query($sql);
 
   if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-      echo "id: " . $row["UserName"]. "<br>";
+      echo "user: " . $row["users"]. "amount: " . $row["amount"] . "<br>";
     }
   } else {
     echo "0 results";
