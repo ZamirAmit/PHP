@@ -49,7 +49,7 @@ function get_pie_chart($start_Date,$end_date){
     $start_date = htmlspecialchars($_GET["start_date"]);
     $end_date = htmlspecialchars($_GET["end_date"]);
     $chart = htmlspecialchars($_GET["chart"]);
-    $type = htmlspecialchars($_GET["end_date"]);
+    $type = htmlspecialchars($_GET["type"]);
     
     if($type == "dashboard"){
 
