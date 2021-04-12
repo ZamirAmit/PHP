@@ -5,7 +5,9 @@
   $dbname = "bgmndrlz7ef9djdqxyfg";
   // Create connection
   $conn = new mysqli($servername, $username, $password, $dbname);
-
+    $start_date = '2016-05-01';
+    $end_date = '2016-05-30';
+    
   // Check connection
   if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -17,9 +19,9 @@
     "FROM `TABLE 3`, " .
     "`users` " . 
     "WHERE `date` " .
-    "BETWEEN @start_date " .
-    "AND @end_date  " . 
-    "AND `users`.`UserID` = `TABLE 3`.`user` " . 
+    "BETWEEN " . $start_date .
+    " AND " . $end_date   . 
+    " AND `users`.`UserID` = `TABLE 3`.`user` " . 
     "GROUP BY `user`";
 
   $result = $conn->query($sql);
