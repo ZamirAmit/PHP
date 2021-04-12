@@ -41,13 +41,14 @@ function get_pie_chart($start_Date,$end_date){
     $conn->close();
     echo "Connection closed!";
     echo "<br>";
-    $data = array("users" => $users, "amount" => $amount);
-    return $data;
+    $data = array("labels" => $users, "data" => $amount);
+    $obj = json_encode($data, JSON_UNESCAPED_UNICODE );
+    return $obj;
 }
 
     $start_date = '2016-05-01';
     $end_date = '2016-05-30';
     $data = get_pie_chart($start_Date,$end_date); 
-    echo json_encode($data, JSON_UNESCAPED_UNICODE );
+    echo $data;
 
 ?>
