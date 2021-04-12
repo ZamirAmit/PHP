@@ -46,8 +46,8 @@ function get_pie_chart($start_Date,$end_date){
     return $obj;
 }
 
-    $start_date = '2016-05-01';
-    $end_date = '2016-05-30';
+    $start_date = htmlspecialchars($_GET["start_date"]);
+    $end_date = htmlspecialchars($_GET["end_date"]);
     $data = get_pie_chart($start_Date,$end_date); 
     echo $data;
 
