@@ -14,7 +14,7 @@
   }
   echo "Connected successfully";
   echo "<br>";
-  $sql = "SELECT `users`.`UserName`, " . 
+  $sql = " SELECT `users`.`UserName` as user, " . 
     " sum(`sum`) AS amount " .
     " FROM `TABLE 3`, " .
     " `users` " . 
@@ -28,7 +28,7 @@
   if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-      echo "user: " . $row["`users`.`UserName`"]. "amount: " . $row["amount"] . "<br>";
+      echo "user: " . $row["user"]. "amount: " . $row["amount"] . "<br>";
     }
   } else {
     echo "0 results from: " ."<br>" . $sql ."<br>";
