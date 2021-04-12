@@ -23,12 +23,16 @@
     " AND " . chr(34) . $end_date   . chr(34) . 
     " AND `users`.`UserID` = `TABLE 3`.`user` " . 
      "GROUP BY `user`";
-
+  $users = ("");
+  $amount = ("");
   $result = $conn->query($sql);
   if ($result->num_rows > 0) {
     // output data of each row
+  
     while($row = $result->fetch_assoc()) {
-      echo "user: " . $row["user"]. "amount: " . $row["amount"] . "<br>";
+        array_push($users, $row["user"] );
+        array_push($amount, $row["amount"]);
+        //echo "user: " . $row["user"]. "amount: " . $row["amount"] . "<br>";
     }
   } else {
     echo "0 results from: " ."<br>" . $sql ."<br>";
@@ -36,4 +40,5 @@
   $conn->close();
   echo "Connection closed!";
   echo "<br>";
+  echo $users;
 ?>
