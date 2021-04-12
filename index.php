@@ -40,5 +40,5 @@
   $conn->close();
   echo "Connection closed!";
   echo "<br>";
-  echo $users;
+  print_r($users);
 ?>
