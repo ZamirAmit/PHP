@@ -16,7 +16,7 @@ function get_pie_chart($start_Date,$end_date){
     echo "Connected successfully";
     echo "<br>";
     $sql = " SELECT `users`.`UserName` as user, " . 
-      " sum(`sum`) AS amount " .
+      " sum(`sum`) AS values " .
       " FROM `TABLE 3`, " .
       " `users` " . 
       " WHERE `date` " .
@@ -24,16 +24,16 @@ function get_pie_chart($start_Date,$end_date){
       " AND " . chr(34) . $end_date   . chr(34) . 
       " AND `users`.`UserID` = `TABLE 3`.`user` " . 
        "GROUP BY `user`";
-    $users = array();
-    $amount = array();
-    $result = $conn->query($sql);
+    $labels = array();
+    $values = array();
+    $labels = $conn->query($sql);
     if ($result->num_rows > 0) {
       // output data of each row
     
       while($row = $result->fetch_assoc()) {
-          array_push($users, $row["user"] );
-          array_push($amount, $row["amount"]);
-          //echo "user: " . $row["user"]. "amount: " . $row["amount"] . "<br>";
+          array_push($labels, $row["user"] );
+          array_push($values, $row["values"]);
+          //echo "user: " . $row["user"]. "values: " . $row["values"] . "<br>";
       }
     } else {
       echo "0 results from: " ."<br>" . $sql ."<br>";
@@ -41,7 +41,7 @@ function get_pie_chart($start_Date,$end_date){
     $conn->close();
     echo "Connection closed!";
     echo "<br>";
-    $data = array("users" => $users, "amount" => $amount);
+    $data = array("labels" => $labels, "values" => $values);
     return $data;
 }
 
