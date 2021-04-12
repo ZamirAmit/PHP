@@ -23,8 +23,8 @@
     " AND " . chr(34) . $end_date   . chr(34) . 
     " AND `users`.`UserID` = `TABLE 3`.`user` " . 
      "GROUP BY `user`";
-  $users = ("");
-  $amount = ("");
+  $users = array();
+  $amount = array();
   $result = $conn->query($sql);
   if ($result->num_rows > 0) {
     // output data of each row
