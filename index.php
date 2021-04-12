@@ -58,7 +58,12 @@ function get_pie_chart($start_Date,$end_date){
             $data = get_pie_chart($start_Date,$end_date); 
             echo $data;
         
+        }else{
+            echo "No chart type detected!";
         }
+        
+    }else{
+        echo "No operation type detected!";
     }
 
 ?>
