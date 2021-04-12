@@ -7,7 +7,7 @@
   $conn = new mysqli($servername, $username, $password, $dbname);
     $start_date = '2016-05-01';
     $end_date = '2016-05-30';
-    
+
   // Check connection
   if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -15,14 +15,14 @@
   echo "Connected successfully";
   echo "<br>";
   $sql = "SELECT `users`.`UserName`, " . 
-    "sum(`sum`) AS amount " .
-    "FROM `TABLE 3`, " .
-    "`users` " . 
-    "WHERE `date` " .
-    "BETWEEN " . $start_date .
-    " AND " . $end_date   . 
+    " sum(`sum`) AS amount " .
+    " FROM `TABLE 3`, " .
+    " `users` " . 
+    " WHERE `date` " .
+    " BETWEEN " . chr(34) . $start_date . chr(34) .
+    " AND " . chr(34) . $end_date   . chr(34) . 
     " AND `users`.`UserID` = `TABLE 3`.`user` " . 
-    "GROUP BY `user`";
+     "GROUP BY `user`";
 
   $result = $conn->query($sql);
   if ($result->num_rows > 0) {
