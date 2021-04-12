@@ -13,7 +13,7 @@
   echo "Connected successfully";
   echo "<br>";
   $sql = "SELECT `users`.`UserName`, " . 
-    "sum(`sum`) AS amount" .
+    "sum(`sum`) AS amount " .
     "FROM `TABLE 3`, " .
     "`users` " . 
     "WHERE `date` " .
