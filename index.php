@@ -28,7 +28,7 @@
   if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-      echo "user: " . $row["users"]. "amount: " . $row["amount"] . "<br>";
+      echo "user: " . $row["`users`.`UserName`"]. "amount: " . $row["amount"] . "<br>";
     }
   } else {
     echo "0 results from: " ."<br>" . $sql ."<br>";
