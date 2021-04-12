@@ -48,6 +48,6 @@ function get_pie_chart($start_Date,$end_date){
     $start_date = '2016-05-01';
     $end_date = '2016-05-30';
     $data = get_pie_chart($start_Date,$end_date); 
-    print_r($data);
-    
+    echo json_encode($data);
+
 ?>
