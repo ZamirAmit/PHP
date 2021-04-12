@@ -26,7 +26,7 @@ function get_pie_chart($start_Date,$end_date){
        "GROUP BY `user`";
     $labels = array();
     $values = array();
-    $labels = $conn->query($sql);
+    $result = $conn->query($sql);
     if ($result->num_rows > 0) {
       // output data of each row
     
