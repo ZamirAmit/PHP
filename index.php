@@ -40,5 +40,7 @@
   $conn->close();
   echo "Connection closed!";
   echo "<br>";
-  print_r($users);
-?> 
+  $data = array("users" => $users, "amount" => $amount);
+
+  print_r($data);
+?>
