@@ -12,8 +12,8 @@
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
-        echo "Connected successfully";
-        echo "<br>";
+        $data["db-status"] =  "Connected successfully";
+        //echo "<br>";
         $sql = " SELECT `users`.`UserName` as user, " . 
         " sum(`sum`) AS amount " .
         " FROM `TABLE 3`, " .
