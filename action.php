@@ -9,7 +9,6 @@
     if($type == "dashboard"){
 
         if($chart =="pie"){
-
             $data = get_pie_chart($start_Date,$end_date); 
             echo "pie chart:" . "<br>";
             echo $data;
