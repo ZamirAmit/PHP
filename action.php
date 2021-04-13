@@ -6,19 +6,20 @@
     $end_date = $_POST["end_date"];
     $chart = $_POST["chart"];
     $type = $_POST["type"];
+    $response = array();
     if($type == "dashboard"){
-
+        $response["type"] = $type;
         if($chart =="pie"){
             $data = get_pie_chart($start_Date,$end_date); 
-            echo "pie chart:" . "<br>";
-            echo $data;
-        
+            $response["chart"] = "pie-chart";
+            $response["data"] = $data;
+           
         }else{
-            //echo $char . " Is not recognized chart!";
+            $response["chart-error"] =  $char . " Is not recognized chart!";
         }
         
     }else{
-        //echo $type . " Is not recognized operation type!";
+        $response["operation-error"]  = $type . " Is not recognized operation type!";
     }
-
+    echo $response;
 ?>
