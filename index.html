@@ -14,7 +14,7 @@
                     },
                     function(data, status) {
 
-                        obj = JSON.parse(data.replace("\\", ''));
+                        obj = JSON.parse(data.replaceAll("\\\\", ""));
                         console.log(obj);
                     });
             });
