@@ -14,11 +14,11 @@
             echo $data;
         
         }else{
-            echo $char . " Is not recognized chart!";
+            //echo $char . " Is not recognized chart!";
         }
         
     }else{
-        echo $type . " Is not recognized operation type!";
+        //echo $type . " Is not recognized operation type!";
     }
 
 ?>
