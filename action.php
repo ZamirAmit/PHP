@@ -2,11 +2,10 @@
 
     include 'dashboard.php';
 
-    $start_date = htmlspecialchars($_GET["start_date"]);
-    $end_date = htmlspecialchars($_GET["end_date"]);
-    $chart = htmlspecialchars($_GET["chart"]);
-    $type = htmlspecialchars($_GET["type"]);
-  
+    $start_date = htmlspecialchars($_POST["start_date"]);
+    $end_date = htmlspecialchars($_POST["end_date"]);
+    $chart = htmlspecialchars($_POST["chart"]);
+    $type = htmlspecialchars($_POST["type"]);
     if($type == "dashboard"){
 
         if($chart =="pie"){
