@@ -14,8 +14,8 @@
                     },
                     function(data, status) {
 
-                        //obj = JSON.parse();
-                        console.log(data.replaceAll("\\", ""));
+                        obj = JSON.parse(data.replaceAll("\\", ""));
+                        console.log(obj);
                     });
             });
         });

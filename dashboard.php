@@ -7,7 +7,7 @@
         $dbname = "bgmndrlz7ef9djdqxyfg";
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
-
+        $data = array();
         // Check connection
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
@@ -35,12 +35,13 @@
             //echo "user: " . $row["user"]. "amount: " . $row["amount"] . "<br>";
         }
         } else {
-        echo "0 results from: " ."<br>" . $sql ."<br>";
+        $data["result"] =  "0 results from: " ."<br>" . $sql ."<br>";
         }
         $conn->close();
-        echo "Connection closed!";
-        echo "<br>";
-        $data = array("labels" => $users, "data" => $amount);
+        //echo "Connection closed!";
+        //echo "<br>";
+        $data["labels"] = $users;
+        $data["data"] = $amount;
         $obj = json_encode($data, JSON_UNESCAPED_UNICODE );
         return $obj;
     }
