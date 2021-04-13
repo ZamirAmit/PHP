@@ -13,7 +13,8 @@
                         type: "dashboard"
                     },
                     function(data, status) {
-                        obj = JSON.parse(data);
+
+                        obj = JSON.parse(data.replace("\\", ''));
                         console.log(obj);
                     });
             });
