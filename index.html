@@ -36,23 +36,23 @@
 
         function drawChart(obj) {
 
-            var item1 = [obj["data"]["labels"][0], parseFloat(obj["data"]["values"][0]);
-                var item2 = [obj["data"]["labels"][1], parseFloat(obj["data"]["values"][1])];
-                console.log(item1);
-                var data = google.visualization.arrayToDataTable([
-                    ['User', 'Amount'],
-                    item1,
-                    item2
-                ]);
+            var item1 = [obj["data"]["labels"][0], obj["data"]["values"][0]];
+            var item2 = [obj["data"]["labels"][1], obj["data"]["values"][1]];
+            console.log(item1);
+            var data = google.visualization.arrayToDataTable([
+                ['User', 'Amount'],
+                [item1],
+                [item2]
+            ]);
 
-                var options = {
-                    title: 'My Daily Activities',
-                    is3D: true,
-                };
+            var options = {
+                title: 'My Daily Activities',
+                is3D: true,
+            };
 
-                var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-                chart.draw(data, options);
-            }
+            var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+            chart.draw(data, options);
+        }
     </script>
 </body>
 
