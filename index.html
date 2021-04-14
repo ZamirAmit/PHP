@@ -35,9 +35,10 @@
         google.charts.setOnLoadCallback(drawChart);
 
         function drawChart(obj) {
-            console.log(obj);
+
             var item1 = [obj["data"]["labels"][0], obj["data"]["values"][0]];
             var item2 = [obj["data"]["labels"][1], obj["data"]["values"][1]];
+            console.log(item1);
 
             var data = google.visualization.arrayToDataTable([
                 ['User', 'Amount'],
