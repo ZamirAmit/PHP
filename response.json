@@ -1,1 +1,11 @@
-{ type: dashboard, chart: pie - chart, data: { db - status: Connected successfully, labels: [רביד, עמית], data: [8378.00, 7098.00] } }
+{
+    "type": "dashboard",
+    "chart": "pie-chart",
+    "data": "{"
+    "db_status": Connected successfully ","
+    labels ":["
+    רביד ","
+    עמית "],"
+    data ":["
+    8378.00 ","
+    7098.00 "]} }

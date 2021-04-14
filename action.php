@@ -15,11 +15,11 @@
             $response["data"] = $data;
            
         }else{
-            $response["chart-error"] =  $char . " Is not recognized chart!";
+            $response["chart_error"] =  $char . " Is not recognized chart!";
         }
         
     }else{
-        $response["operation-error"]  = $type . " Is not recognized operation type!";
+        $response["operation_error"]  = $type . " Is not recognized operation type!";
     }
     $response = json_encode($response, JSON_UNESCAPED_UNICODE );
     echo $response;

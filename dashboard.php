@@ -35,7 +35,7 @@
             //echo "user: " . $row["user"]. "amount: " . $row["amount"] . "<br>";
         }
         } else {
-        $data["result"] =  "0 results from: " ."<br>" . $sql ."<br>";
+        $data["result"] =  "0 results from: "  . $sql;
         }
         $conn->close();
         //echo "Connection closed!";
