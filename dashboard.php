@@ -41,8 +41,8 @@
         //echo "Connection closed!";
         //echo "<br>";
         $data["labels"] = $users;
-        $data["data"] = $amount;
-        $obj = json_encode($data, JSON_UNESCAPED_UNICODE );
-        return $obj;
+        $data["values"] = $amount;
+        //$obj = json_encode($data, JSON_UNESCAPED_UNICODE );
+        return $data;
     }
 ?>
