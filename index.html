@@ -36,8 +36,8 @@
 
         function drawChart(obj) {
 
-            var item1 = [obj["data"]["labels"][0], obj["data"]["values"][0]];
-            var item2 = [obj["data"]["labels"][1], obj["data"]["values"][1]];
+            var item1 = [obj["data"]["labels"][0], parseFloat(obj["data"]["values"][0])];
+            var item2 = [obj["data"]["labels"][1], parseFloat(obj["data"]["values"][1])];
             console.log(item1);
             var data = google.visualization.arrayToDataTable([
                 ['User', 'Amount'],
