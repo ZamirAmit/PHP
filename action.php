@@ -21,6 +21,6 @@
     }else{
         $response["operation_error"]  = $type . " Is not recognized operation type!";
     }
-    $response = json_encode($response, JSON_UNESCAPED_UNICODE );
+    $response = json_encode($response, JSON_UNESCAPED_UNICODE);
     print_r($response);
 ?>
