@@ -13,7 +13,6 @@
             $data = get_pie_chart($start_Date,$end_date); 
             $response["chart"] = "pie-chart";
             $response["data"] = $data;
-            $response["title"] = $_POST["start_date"] . "-" .  $_POST["end_date"] . "חלוקת הוצאות תקופתית לתאריכים: ";
         }else{
             $response["chart_error"] =  $char . " Is not recognized chart!";
         }
@@ -21,6 +20,8 @@
     }else{
         $response["operation_error"]  = $type . " Is not recognized operation type!";
     }
+    $response["title"] = $_POST["start_date"] . "-" .  $_POST["end_date"] . " :חלוקת הוצאות תקופתית לתאריכים ";
+        
     $response = json_encode($response, JSON_UNESCAPED_UNICODE);
     print_r($response);
 ?>
