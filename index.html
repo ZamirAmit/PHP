@@ -13,7 +13,7 @@
                         type: "dashboard"
                     },
                     function(data, status) {
-                        console.log(data.replaceAll("\\", "").replaceAll(String.charCodeAt(34), ""));
+                        console.log(data.replaceAll("\\", "").replaceAll(String.fromCharCode(34), ""));
                         obj = JSON.parse(data.replaceAll("\\", ""));
                         console.log(obj);
                     });
