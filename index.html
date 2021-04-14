@@ -15,8 +15,8 @@
                     },
                     function(data, status) {
                         console.log(data);
-                        console.log(JSON.parse(data));
-                        drawChart(data);
+                        var obj = JSON.parse(data);
+                        drawChart(obj);
                     });
             });
         });
@@ -35,9 +35,9 @@
         google.charts.setOnLoadCallback(drawChart);
 
         function drawChart(data) {
-            console.log(data);
-            var item1 = [data["data"]["labels"][0], data["data"]["values"][0]];
-            var item2 = [data["data"]["labels"][1], data["data"]["values"][1]];
+            console.log(obj);
+            var item1 = [obj["data"]["labels"][0], obj["data"]["values"][0]];
+            var item2 = [obj["data"]["labels"][1], obj["data"]["values"][1]];
 
             var data = google.visualization.arrayToDataTable([
                 ['User', 'Amount'],
