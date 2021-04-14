@@ -35,6 +35,7 @@
         google.charts.setOnLoadCallback(drawChart);
 
         function drawChart(data) {
+            console.log(data);
             var item1 = [data["data"]["labels"][0], data["data"]["values"][0]];
             var item2 = [data["data"]["labels"][1], data["data"]["values"][1]];
 
