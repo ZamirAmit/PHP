@@ -12,8 +12,8 @@
             type: "dashboard"
         },
         function(data, status) {
-            console.log(data);
             var obj = JSON.parse(data);
+            console.log(obj);
 
             try {
 
