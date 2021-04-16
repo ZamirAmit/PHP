@@ -42,10 +42,27 @@
             fwrite($myfile, $txt);
             fclose($myfile);
     }
+        $sql = "SELECT `date_picker`.`DateStart` FROM `date_picker`";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+            // output data of each row
+    
+            while($row = $result->fetch_assoc()) {
+                $data["title"] = $row["DateStart"];
+            }
+            } else {
+                $data["result"] =  "0 results from: "  . $sql;
+                $myfile = fopen("sql_error.txt", "w") or $data["result"] = $data["result"]  . "unable creating file_log";
+                $txt = $sql . "\n";
+                fwrite($myfile,"0 results from: " . "\n"); 
+                fwrite($myfile, $txt);
+                fclose($myfile);
+        }
         $conn->close();
         //echo "Connection closed!";
         //echo "<br>";
         $data["labels"] = $users;
+        $data["values"] = $amount;
         $data["values"] = $amount;
         //$obj = json_encode($data, JSON_UNESCAPED_UNICODE );
         return $data;
