@@ -19,8 +19,8 @@
         " FROM `daily_expances`, " .
         " `users` " . 
         " WHERE `date` " .
-        " BETWEEN " . chr(34) . $start_Date . chr(34) .
-        " AND " . chr(34) . $end_date   . chr(34) . 
+        " BETWEEN (SELECT `date_picker`.`DateStart` FROM `date_picker`) "  .
+        " AND (SELECT `date_picker`.`DateEnd` FROM `date_picker`) " . 
         " AND `users`.`UserID` = `daily_expances`.`userID` " . 
         "GROUP BY `user`";
         $users = array();
