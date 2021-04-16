@@ -1,5 +1,6 @@
 <?php
 
+try {
     include 'dashboard.php';
 
     $start_date = $_POST["start_date"];
@@ -24,4 +25,13 @@
         
     $response = json_encode($response, JSON_UNESCAPED_UNICODE);
     print_r($response);
+}
+catch (Exception $e) {
+    echo $e->getMessage();
+}
+catch (InvalidArgumentException $e) {
+    echo $e->getMessage();
+}
+
+ 
 ?>
