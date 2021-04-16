@@ -21,7 +21,7 @@ try {
     }else{
         $response["operation_error"]  = $type . " Is not recognized operation type!";
     }
-    $response["title"] = date("Y-m",$data["title"]) . " :חלוקת הוצאות לחודש";
+    $response["title"] = date_format(date_create($data["title"]),"Y-m") . " :חלוקת הוצאות לחודש";
         
     $response = json_encode($response, JSON_UNESCAPED_UNICODE);
     print_r($response);
