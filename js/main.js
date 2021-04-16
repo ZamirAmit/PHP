@@ -19,7 +19,13 @@
 
                 //pie chart
                 var ctx = document.getElementById("pieChart");
+                var total = obj.data.vlaues[0] + obj.data.vlaues[0];
                 document.getElementById("pieChartTitle").innerHTML = obj.title;
+                document.getElementById("totalExpances").innerHTML = total;
+                document.getElementById("totalDescription").innerHTML = "כלל ההוצאות";
+
+                totalDescription
+                totalExpances
                 if (ctx) {
                     ctx.height = 200;
                     var myChart = new Chart(ctx, {
