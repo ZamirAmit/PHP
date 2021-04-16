@@ -23,7 +23,7 @@
                 document.getElementById("pieChartTitle").innerHTML = obj.title;
                 document.getElementById("totalExpances").innerHTML = total;
                 document.getElementById("totalDescription").innerHTML = "כלל ההוצאות";
-
+                console.log(document.getElementById("totalDescription"));
                 totalDescription
                 totalExpances
                 if (ctx) {
