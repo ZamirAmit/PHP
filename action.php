@@ -1,9 +1,5 @@
 <?php
-
     include 'dashboard.php';
-
-    $start_date = $_POST["start_date"];
-    $end_date = $_POST["end_date"];
     $chart = $_POST["chart"];
     $type = $_POST["type"];
     $response = array();
