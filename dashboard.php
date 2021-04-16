@@ -35,8 +35,12 @@
             //echo "user: " . $row["user"]. "amount: " . $row["amount"] . "<br>";
         }
         } else {
-        $data["result"] =  "0 results from: "  . $sql;
-        }
+            $data["result"] =  "0 results from: "  . $sql;
+            $myfile = fopen("sql_error.txt", "w") or $data["result"] = $data["result"]  . "unable creating file_log";
+            $txt = $sql . "\n";
+            fwrite($myfile, $txt);
+            fclose($myfile);
+    }
         $conn->close();
         //echo "Connection closed!";
         //echo "<br>";
