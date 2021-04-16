@@ -4,6 +4,63 @@
     var pie_chart_data = [30, 70];
     var pie_chart_labels = ['רביד', 'עמית'];
     var pie_chart_title = "הוצאות לפי משתמש";
+
+    $.post("action.php", {
+            start_date: "2016-05-01",
+            end_date: "2016-05-30",
+            chart: "pie",
+            type: "dashboard"
+        },
+        function(data, status) {
+            console.log(data);
+            var obj = JSON.parse(data);
+
+            try {
+
+                //pie chart
+                var ctx = document.getElementById("pieChart");
+                if (ctx) {
+                    ctx.height = 200;
+                    var myChart = new Chart(ctx, {
+                        type: 'pie',
+                        data: {
+                            datasets: [{
+                                data: pie_chart_data,
+                                backgroundColor: [
+                                    "rgba(0, 123, 255,0.9)",
+                                    "rgba(0, 123, 255,0.7)",
+                                    "rgba(0, 123, 255,0.5)",
+                                    "rgba(0,0,0,0.07)"
+                                ],
+                                hoverBackgroundColor: [
+                                    "rgba(0, 123, 255,0.9)",
+                                    "rgba(0, 123, 255,0.7)",
+                                    "rgba(0, 123, 255,0.5)",
+                                    "rgba(0,0,0,0.07)"
+                                ]
+
+                            }],
+                            labels: pie_chart_labels
+                        },
+                        options: {
+                            legend: {
+                                position: 'top',
+                                labels: {
+                                    fontFamily: 'Poppins'
+                                }
+
+                            },
+                            responsive: true
+                        }
+                    });
+                }
+
+
+            } catch (error) {
+                console.log(error);
+            }
+
+        });
     try {
         //WidgetChart 1
         var ctx = document.getElementById("widgetChart1");
@@ -1095,50 +1152,6 @@
     }
 
 
-    try {
-
-        //pie chart
-        var ctx = document.getElementById("pieChart");
-        if (ctx) {
-            ctx.height = 200;
-            var myChart = new Chart(ctx, {
-                type: 'pie',
-                data: {
-                    datasets: [{
-                        data: pie_chart_data,
-                        backgroundColor: [
-                            "rgba(0, 123, 255,0.9)",
-                            "rgba(0, 123, 255,0.7)",
-                            "rgba(0, 123, 255,0.5)",
-                            "rgba(0,0,0,0.07)"
-                        ],
-                        hoverBackgroundColor: [
-                            "rgba(0, 123, 255,0.9)",
-                            "rgba(0, 123, 255,0.7)",
-                            "rgba(0, 123, 255,0.5)",
-                            "rgba(0,0,0,0.07)"
-                        ]
-
-                    }],
-                    labels: pie_chart_labels
-                },
-                options: {
-                    legend: {
-                        position: 'top',
-                        labels: {
-                            fontFamily: 'Poppins'
-                        }
-
-                    },
-                    responsive: true
-                }
-            });
-        }
-
-
-    } catch (error) {
-        console.log(error);
-    }
 
     try {
 
