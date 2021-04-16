@@ -25,7 +25,7 @@
                         type: 'pie',
                         data: {
                             datasets: [{
-                                data: obj["values"],
+                                data: obj.data.values,
                                 backgroundColor: [
                                     "rgba(0, 123, 255,0.9)",
                                     "rgba(0, 123, 255,0.7)",
@@ -40,7 +40,7 @@
                                 ]
 
                             }],
-                            labels: obj["labels"]
+                            labels: obj.data.labels
                         },
                         options: {
                             legend: {
