@@ -1,10 +1,11 @@
 <?php
-    function get_pie_chart($start_Date,$end_date){
-
         $servername = "bgmndrlz7ef9djdqxyfg-mysql.services.clever-cloud.com";
         $username = "uuibjej9e6w3n7as";
         $password = "yM1BD2Cw46IRCe89uYls";
         $dbname = "bgmndrlz7ef9djdqxyfg";
+
+    function get_pie_chart($start_Date,$end_date){
+
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
         $data = array();
@@ -45,4 +46,5 @@
         //$obj = json_encode($data, JSON_UNESCAPED_UNICODE );
         return $data;
     }
+    
 ?>
