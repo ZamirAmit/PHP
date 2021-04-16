@@ -19,6 +19,7 @@
 
                 //pie chart
                 var ctx = document.getElementById("pieChart");
+                document.getElementById("pieChartTitle").innerHTML = obj.title;
                 if (ctx) {
                     ctx.height = 200;
                     var myChart = new Chart(ctx, {
