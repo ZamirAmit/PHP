@@ -20,7 +20,7 @@
     }else{
         $response["operation_error"]  = $type . " Is not recognized operation type!";
     }
-    $response["title"] = date($_POST["start_date"],"Y-m") . " :חלוקת הוצאות  ";
+    $response["title"] = date("Y-m",$_POST["start_date"]) . " :חלוקת הוצאות  ";
         
     $response = json_encode($response, JSON_UNESCAPED_UNICODE);
     print_r($response);
