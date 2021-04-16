@@ -1,5 +1,9 @@
 <?php
+
     include 'dashboard.php';
+
+    $start_date = $_POST["start_date"];
+    $end_date = $_POST["end_date"];
     $chart = $_POST["chart"];
     $type = $_POST["type"];
     $response = array();
@@ -16,7 +20,7 @@
     }else{
         $response["operation_error"]  = $type . " Is not recognized operation type!";
     }
-    $response["title"] = date_format(date_create($data["title"],"Y-m") . " :חלוקת הוצאות  ";
+    $response["title"] = $_POST["start_date"] . "-" .  $_POST["end_date"] . " :חלוקת הוצאות תקופתית לתאריכים ";
         
     $response = json_encode($response, JSON_UNESCAPED_UNICODE);
     print_r($response);
