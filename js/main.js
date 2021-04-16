@@ -24,8 +24,6 @@
                 document.getElementById("totalExpances").innerHTML = total;
                 document.getElementById("totalDescription").innerHTML = "כלל ההוצאות";
                 console.log(document.getElementById("totalDescription"));
-                totalDescription
-                totalExpances
                 if (ctx) {
                     ctx.height = 200;
                     var myChart = new Chart(ctx, {
