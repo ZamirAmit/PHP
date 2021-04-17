@@ -939,9 +939,9 @@
                         type: 'bar',
                         defaultFontFamily: 'Poppins',
                         data: {
-                            labels: data.data.labels,
+                            labels: obj.data.labels,
                             datasets: [{
-                                    label: data.title,
+                                    label: obj.title,
                                     data: obj.data.values,
                                     borderColor: "rgba(0, 123, 255, 0.9)",
                                     borderWidth: "0",
