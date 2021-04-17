@@ -15,13 +15,12 @@ try {
             $response["chart"] = "pie-chart";
             $response["data"] = $data;
             $response["title"] = date_format(date_create($data["title"]),"Y-m") . " :חלוקת הוצאות לחודש";
-    
-            if($chart =="bar"){
-                $data = get_bar_chart(); 
-                $response["chart"] = "bar-chart";
-                $response["data"] = $data;
-                $response["title"] = date_format(date_create($data["title"]),"Y-m") . " :סוגי הוצאות לחודש";
-            }
+        }
+        elseif($chart =="bar"){
+            $data = get_bar_chart(); 
+            $response["chart"] = "bar-chart";
+            $response["data"] = $data;
+            $response["title"] = date_format(date_create($data["title"]),"Y-m") . " :סוגי הוצאות לחודש";
         }else{
             $response["chart_error"] =  $char . " Is not recognized chart!";
         }
