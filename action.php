@@ -11,7 +11,7 @@ try {
     if($type == "dashboard"){
         $response["type"] = $type;
         if($chart =="pie"){
-            $data = get_pie_chart($start_Date,$end_date); 
+            $data = get_pie_chart(); 
             $response["chart"] = "pie-chart";
             $response["data"] = $data;
             $response["title"] = date_format(date_create($data["title"]),"Y-m") . " :חלוקת הוצאות לחודש";

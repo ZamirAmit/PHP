@@ -63,7 +63,6 @@
         //echo "<br>";
         $data["labels"] = $users;
         $data["values"] = $amount;
-        $data["values"] = $amount;
         //$obj = json_encode($data, JSON_UNESCAPED_UNICODE );
         return $data;
     }
