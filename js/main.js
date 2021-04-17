@@ -942,20 +942,13 @@
                             labels: data.data.labels,
                             datasets: [{
                                     label: data.title,
-                                    data: data.data.values,
+                                    data: obj.data.values,
                                     borderColor: "rgba(0, 123, 255, 0.9)",
                                     borderWidth: "0",
                                     backgroundColor: "rgba(0, 123, 255, 0.5)",
                                     fontFamily: "Poppins"
-                                },
-                                {
-                                    label: "My Second dataset",
-                                    data: [28, 48, 40, 19, 86, 27, 90],
-                                    borderColor: "rgba(0,0,0,0.09)",
-                                    borderWidth: "0",
-                                    backgroundColor: "rgba(0,0,0,0.07)",
-                                    fontFamily: "Poppins"
                                 }
+
                             ]
                         },
                         options: {
