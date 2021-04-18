@@ -23,7 +23,7 @@ try {
             $response["title"] = date_format(date_create($data["title"]),"Y-m") . " :סוגי הוצאות לחודש";
        
         }elseif($chart =="bar-per-year"){
-            $data = get_bar_chart(); 
+            $data = get_bar_chart_per_year(); 
             $response["chart"] = "bar-per-year";
             $response["data"] = $data;
             $response["title"] = date_format(date_create($data["title"]),"Y") . " הוצאות בשנת";
