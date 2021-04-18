@@ -21,6 +21,13 @@ try {
             $response["chart"] = "bar-chart";
             $response["data"] = $data;
             $response["title"] = date_format(date_create($data["title"]),"Y-m") . " :סוגי הוצאות לחודש";
+       
+        }elseif($chart =="bar-per-year"){
+            $data = get_bar_chart(); 
+            $response["chart"] = "bar-per-year";
+            $response["data"] = $data;
+            $response["title"] = date_format(date_create($data["title"]),"Y") . " הוצאות בשנת";
+    
         }else{
             $response["chart_error"] =  $char . " Is not recognized chart!";
         }
