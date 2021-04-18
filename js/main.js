@@ -1201,7 +1201,7 @@
     }
     $.post("action.php", {
 
-            chart: "bar",
+            chart: "bar-per-year",
             type: "dashboard"
         },
         function(data_per_year, status) {
