@@ -931,6 +931,7 @@
 
             try {
                 //bar chart
+                document.getElementById("barChartTitle").innerHTML = obj.title;
                 var ctx = document.getElementById("barChart");
                 if (ctx) {
                     ctx.height = 200;
@@ -940,7 +941,6 @@
                         data: {
                             labels: obj.data.labels,
                             datasets: [{
-                                    label: obj.title,
                                     data: obj.data.values,
                                     borderColor: "rgba(0, 123, 255, 0.9)",
                                     borderWidth: "0",
