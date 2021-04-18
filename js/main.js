@@ -1204,8 +1204,8 @@
             chart: "bar",
             type: "dashboard"
         },
-        function(data, status) {
-            var obj_bar_per_year = JSON.parse(data);
+        function(data_per_year, status) {
+            var obj_bar_per_year = JSON.parse(data_per_year);
             console.log(obj_bar_per_year);
 
             try {
