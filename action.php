@@ -16,7 +16,7 @@ try {
             $response["data"] = $data;
             $response["title"] = date_format(date_create($data["title"]),"Y-m") . " :חלוקת הוצאות לחודש";
         }
-        elseif($chart =="bar"){
+        elseif($chart =="doughut-chart"){
             $data = get_doughut_chart(); 
             $response["chart"] = "doughut-chart";
             $response["data"] = $data;
