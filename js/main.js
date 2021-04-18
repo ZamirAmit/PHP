@@ -12,22 +12,21 @@
             type: "dashboard"
         },
         function(data, status) {
-            var obj = JSON.parse(data);
-            console.log(obj);
+            var obj_pie = JSON.parse(data);
+            console.log(obj_pie);
 
             try {
 
                 //pie chart
                 var ctx = document.getElementById("pieChart");
-                var total = obj.data.vlaues[0] + obj.data.vlaues[0];
-                document.getElementById("pieChartTitle").innerHTML = obj.title;
+                document.getElementById("pieChartTitle").innerHTML = obj_pie.title;
                 if (ctx) {
                     ctx.height = 200;
                     var myChart = new Chart(ctx, {
                         type: 'pie',
                         data: {
                             datasets: [{
-                                data: obj.data.values,
+                                data: obj_pie.data.values,
                                 backgroundColor: [
                                     "rgba(0, 123, 255,0.9)",
                                     "rgba(0, 123, 255,0.7)",
@@ -42,7 +41,7 @@
                                 ]
 
                             }],
-                            labels: obj.data.labels
+                            labels: obj_pie.data.labels
                         },
                         options: {
                             legend: {
