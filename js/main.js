@@ -923,7 +923,7 @@
 
     try {
         //bar chart
-        document.getElementById("barChartTitle").innerHTML = obj.title;
+        document.getElementById("barChartTitle").innerHTML = "";
         var ctx = document.getElementById("barChart");
         if (ctx) {
             ctx.height = 200;
@@ -931,9 +931,9 @@
                 type: 'bar',
                 defaultFontFamily: 'Poppins',
                 data: {
-                    labels: obj.data.labels,
+                    labels: ["a", "b", "c", "d"],
                     datasets: [{
-                            data: obj.data.values,
+                            data: [1, 2, 3, 4],
                             borderColor: "rgba(0, 123, 255, 0.9)",
                             borderWidth: "0",
                             backgroundColor: "rgba(0, 123, 255, 0.5)",
