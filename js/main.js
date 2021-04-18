@@ -1106,6 +1106,7 @@
             try {
 
                 //doughut chart
+                document.getElementById("doughutChartTitle").innerHTML = obj_dounut.title;
                 var ctx = document.getElementById("doughutChart");
                 if (ctx) {
                     ctx.height = 150;
@@ -1128,7 +1129,7 @@
                                 ]
 
                             }],
-                            labels: obj_dounut.data.labels;
+                            labels: obj_dounut.data.labels
                         },
                         options: {
                             legend: {
