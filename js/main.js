@@ -1100,8 +1100,8 @@
             chart: "bar",
             type: "dashboard"
         },
-        function(data, status) {
-            var obj_dounut = JSON.parse(data);
+        function(data_dounut, status) {
+            var obj_dounut = JSON.parse(data_dounut);
             console.log(obj_dounut);
             try {
 
