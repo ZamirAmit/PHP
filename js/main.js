@@ -920,67 +920,58 @@
     } catch (error) {
         console.log(error);
     }
-    $.post("action.php", {
 
-            chart: "bar",
-            type: "dashboard"
-        },
-        function(data, status) {
-            var obj = JSON.parse(data);
-            console.log(obj);
-
-            try {
-                //bar chart
-                document.getElementById("barChartTitle").innerHTML = obj.title;
-                var ctx = document.getElementById("barChart");
-                if (ctx) {
-                    ctx.height = 200;
-                    var myChart = new Chart(ctx, {
-                        type: 'bar',
-                        defaultFontFamily: 'Poppins',
-                        data: {
-                            labels: obj.data.labels,
-                            datasets: [{
-                                    data: obj.data.values,
-                                    borderColor: "rgba(0, 123, 255, 0.9)",
-                                    borderWidth: "0",
-                                    backgroundColor: "rgba(0, 123, 255, 0.5)",
-                                    fontFamily: "Poppins"
-                                }
-
-                            ]
-                        },
-                        options: {
-                            legend: {
-                                position: 'top',
-                                labels: {
-                                    fontFamily: 'Poppins'
-                                }
-
-                            },
-                            scales: {
-                                xAxes: [{
-                                    ticks: {
-                                        fontFamily: "Poppins"
-
-                                    }
-                                }],
-                                yAxes: [{
-                                    ticks: {
-                                        beginAtZero: true,
-                                        fontFamily: "Poppins"
-                                    }
-                                }]
-                            }
+    try {
+        //bar chart
+        document.getElementById("barChartTitle").innerHTML = obj.title;
+        var ctx = document.getElementById("barChart");
+        if (ctx) {
+            ctx.height = 200;
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                defaultFontFamily: 'Poppins',
+                data: {
+                    labels: obj.data.labels,
+                    datasets: [{
+                            data: obj.data.values,
+                            borderColor: "rgba(0, 123, 255, 0.9)",
+                            borderWidth: "0",
+                            backgroundColor: "rgba(0, 123, 255, 0.5)",
+                            fontFamily: "Poppins"
                         }
-                    });
+
+                    ]
+                },
+                options: {
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            fontFamily: 'Poppins'
+                        }
+
+                    },
+                    scales: {
+                        xAxes: [{
+                            ticks: {
+                                fontFamily: "Poppins"
+
+                            }
+                        }],
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true,
+                                fontFamily: "Poppins"
+                            }
+                        }]
+                    }
                 }
+            });
+        }
 
 
-            } catch (error) {
-                console.log(error);
-            }
-        });
+    } catch (error) {
+        console.log(error);
+    }
 
     try {
 
@@ -1104,57 +1095,60 @@
     }
 
 
-    try {
+    $.post("action.php", {
 
-        //doughut chart
-        var ctx = document.getElementById("doughutChart");
-        if (ctx) {
-            ctx.height = 150;
-            var myChart = new Chart(ctx, {
-                type: 'doughnut',
-                data: {
-                    datasets: [{
-                        data: [45, 25, 20, 10],
-                        backgroundColor: [
-                            "rgba(0, 123, 255,0.9)",
-                            "rgba(0, 123, 255,0.7)",
-                            "rgba(0, 123, 255,0.5)",
-                            "rgba(0,0,0,0.07)"
-                        ],
-                        hoverBackgroundColor: [
-                            "rgba(0, 123, 255,0.9)",
-                            "rgba(0, 123, 255,0.7)",
-                            "rgba(0, 123, 255,0.5)",
-                            "rgba(0,0,0,0.07)"
-                        ]
+            chart: "bar",
+            type: "dashboard"
+        },
+        function(data, status) {
+            var obj_dounut = JSON.parse(data);
+            console.log(obj);
+            try {
 
-                    }],
-                    labels: [
-                        "Green",
-                        "Green",
-                        "Green",
-                        "Green"
-                    ]
-                },
-                options: {
-                    legend: {
-                        position: 'top',
-                        labels: {
-                            fontFamily: 'Poppins'
+                //doughut chart
+                var ctx = document.getElementById("doughutChart");
+                if (ctx) {
+                    ctx.height = 150;
+                    var myChart = new Chart(ctx, {
+                        type: 'doughnut',
+                        data: {
+                            datasets: [{
+                                data: obj_dounut.data.values,
+                                backgroundColor: [
+                                    "rgba(0, 123, 255,0.9)",
+                                    "rgba(0, 123, 255,0.7)",
+                                    "rgba(0, 123, 255,0.5)",
+                                    "rgba(0,0,0,0.07)"
+                                ],
+                                hoverBackgroundColor: [
+                                    "rgba(0, 123, 255,0.9)",
+                                    "rgba(0, 123, 255,0.7)",
+                                    "rgba(0, 123, 255,0.5)",
+                                    "rgba(0,0,0,0.07)"
+                                ]
+
+                            }],
+                            labels: obj_dounut.data.labels;
+                        },
+                        options: {
+                            legend: {
+                                position: 'top',
+                                labels: {
+                                    fontFamily: 'Poppins'
+                                }
+
+                            },
+                            responsive: true
                         }
-
-                    },
-                    responsive: true
+                    });
                 }
-            });
-        }
 
 
-    } catch (error) {
-        console.log(error);
-    }
+            } catch (error) {
+                console.log(error);
+            }
 
-
+        });
 
     try {
 

@@ -12,13 +12,13 @@ try {
         $response["type"] = $type;
         if($chart =="pie"){
             $data = get_pie_chart(); 
-            $response["chart"] = "pie-chart";
+            $response["chart"] = "doughut-chart";
             $response["data"] = $data;
             $response["title"] = date_format(date_create($data["title"]),"Y-m") . " :חלוקת הוצאות לחודש";
         }
         elseif($chart =="bar"){
-            $data = get_bar_chart(); 
-            $response["chart"] = "bar-chart";
+            $data = get_doughut_chart(); 
+            $response["chart"] = "doughut-chart";
             $response["data"] = $data;
             $response["title"] = date_format(date_create($data["title"]),"Y-m") . " :סוגי הוצאות לחודש";
        
