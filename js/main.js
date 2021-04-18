@@ -1,12 +1,9 @@
 (function($) {
     // USE STRICT
     "use strict";
-    var pie_chart_data = [30, 70];
-    var pie_chart_labels = ['רביד', 'עמית'];
-    var pie_chart_title = "הוצאות לפי משתמש";
 
     $.post("action.php", {
-            chart: "pie",
+            chart: "pie-chart",
             type: "dashboard"
         },
         function(data, status) {

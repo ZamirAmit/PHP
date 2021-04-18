@@ -10,7 +10,7 @@ try {
     $response = array();
     if($type == "dashboard"){
         $response["type"] = $type;
-        if($chart =="pie"){
+        if($chart =="pie-chart"){
             $data = get_pie_chart(); 
             $response["chart"] = "doughut-chart";
             $response["data"] = $data;
