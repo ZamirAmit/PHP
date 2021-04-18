@@ -6,8 +6,6 @@
     var pie_chart_title = "הוצאות לפי משתמש";
 
     $.post("action.php", {
-            start_date: "2016-05-01",
-            end_date: "2016-05-30",
             chart: "pie",
             type: "dashboard"
         },
