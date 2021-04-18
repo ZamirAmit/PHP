@@ -1097,7 +1097,7 @@
 
     $.post("action.php", {
 
-            chart: "bar",
+            chart: "dounut-chart",
             type: "dashboard"
         },
         function(data_dounut, status) {
