@@ -1102,7 +1102,7 @@
         },
         function(data, status) {
             var obj_dounut = JSON.parse(data);
-            console.log(obj);
+            console.log(obj_dounut);
             try {
 
                 //doughut chart
