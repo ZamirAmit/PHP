@@ -51,13 +51,13 @@
                         }
                     });
                 }
+            });
+
+    } catch (error) {
+        console.log(error);
+    }
 
 
-            } catch (error) {
-                console.log(error);
-            }
-
-        });
     try {
         //WidgetChart 1
         var ctx = document.getElementById("widgetChart1");
@@ -1139,12 +1139,12 @@
                     });
                 }
 
+            });
+    } catch (error) {
+        console.log(error);
+    }
 
-            } catch (error) {
-                console.log(error);
-            }
 
-        });
 
 
     try {
@@ -1244,11 +1244,11 @@
                         }
                     });
                 }
+            });
+    } catch (error) {
+        console.log(error);
+    }
 
-            } catch (error) {
-                console.log(error);
-            }
-        });
 })(jQuery);
 
 
