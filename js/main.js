@@ -10,7 +10,7 @@
             },
             function(data, status) {
                 var obj_pie = JSON.parse(data);
-                console.log(obj_pie);
+
 
 
                 //pie chart
@@ -51,6 +51,7 @@
                         }
                     });
                 }
+                console.log(obj_pie);
             });
 
     } catch (error) {
