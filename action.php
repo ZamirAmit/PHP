@@ -3,8 +3,6 @@
 try {
     include 'dashboard.php';
 
-    $start_date = $_POST["start_date"];
-    $end_date = $_POST["end_date"];
     $chart = $_POST["chart"];
     $type = $_POST["type"];
     $response = array();
@@ -16,9 +14,9 @@ try {
             $response["data"] = $data;
             $response["title"] = date_format(date_create($data["title"]),"Y-m") . " :חלוקת הוצאות לחודש";
         }
-        elseif($chart =="dounut-chart"){
-            $data = get_dounut_chart(); 
-            $response["chart"] = "doughut-chart";
+        elseif($chart =="doughnut-chart"){
+            $data = get_doughnut_chart(); 
+            $response["chart"] = "doughnut-chart";
             $response["data"] = $data;
             $response["title"] = date_format(date_create($data["title"]),"Y-m") . " :התפלגות הוצאות לחודש";
        
