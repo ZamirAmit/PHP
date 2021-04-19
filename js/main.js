@@ -1109,7 +1109,7 @@
                         type: 'doughnut',
                         data: {
                             datasets: [{
-                                data: obj_doughnut.data.values,
+                                data: [12, 23, 44, 54], //obj_doughnut.data.values,
                                 backgroundColor: [
                                     "rgba(0, 123, 255,0.9)",
                                     "rgba(0, 123, 255,0.7)",
@@ -1124,7 +1124,7 @@
                                 ]
 
                             }],
-                            labels: obj_doughnut.data.labels
+                            labels: ["2", "3", "2", "2"] //obj_doughnut.data.labels
                         },
                         options: {
                             legend: {
