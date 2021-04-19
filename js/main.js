@@ -1092,7 +1092,7 @@
 
     $.post("action.php", {
 
-            chart: "dounut-chart",
+            chart: "doughut-chart",
             type: "dashboard"
         },
         function(data_dounut, status) {

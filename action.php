@@ -12,7 +12,7 @@ try {
         $response["type"] = $type;
         if($chart =="pie-chart"){
             $data = get_pie_chart(); 
-            $response["chart"] = "doughut-chart";
+            $response["chart"] = "pie-chart";
             $response["data"] = $data;
             $response["title"] = date_format(date_create($data["title"]),"Y-m") . " :חלוקת הוצאות לחודש";
         }
