@@ -6,6 +6,7 @@ try {
     $chart = $_POST["chart"];
     $type = $_POST["type"];
     $response = array();
+    // Checks request operation type:
     if($type == "dashboard"){
         $response["type"] = $type;
         if($chart =="pie-chart"){
