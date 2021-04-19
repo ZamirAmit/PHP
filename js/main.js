@@ -388,7 +388,7 @@
         if (ctx) {
             ctx.height = 280;
             var myChart = new Chart(ctx, {
-                type: 'dounut',
+                type: 'doughnut',
                 data: {
                     datasets: [{
                         label: "My First dataset",
@@ -671,7 +671,7 @@
         if (ctx) {
             ctx.height = 209;
             var myChart = new Chart(ctx, {
-                type: 'dounut',
+                type: 'doughnut',
                 data: {
                     datasets: [{
                         label: "My First dataset",
@@ -1092,24 +1092,24 @@
 
     $.post("action.php", {
             type: "dashboard",
-            chart: "dounut-chart"
+            chart: "doughnut-chart"
 
         },
-        function(data_dounut, status) {
-            var obj_dounut = JSON.parse(data_dounut);
-            console.log(obj_dounut);
+        function(data_doughnut, status) {
+            var obj_doughnut = JSON.parse(data_doughnut);
+            console.log(obj_doughnut);
             try {
 
-                //dounut chart
-                document.getElementById("dounutChartTitle").innerHTML = obj_dounut.title;
-                var ctx = document.getElementById("dounutChart");
+                //doughnut chart
+                document.getElementById("doughnutChartTitle").innerHTML = obj_doughnut.title;
+                var ctx = document.getElementById("doughnutChart");
                 if (ctx) {
                     ctx.height = 150;
                     var myChart = new Chart(ctx, {
-                        type: 'dounut',
+                        type: 'doughnut',
                         data: {
                             datasets: [{
-                                data: obj_dounut.data.values,
+                                data: obj_doughnut.data.values,
                                 backgroundColor: [
                                     "rgba(0, 123, 255,0.9)",
                                     "rgba(0, 123, 255,0.7)",
@@ -1124,7 +1124,7 @@
                                 ]
 
                             }],
-                            labels: obj_dounut.data.labels
+                            labels: obj_doughnut.data.labels
                         },
                         options: {
                             legend: {
