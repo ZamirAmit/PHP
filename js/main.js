@@ -1,17 +1,17 @@
 (function($) {
     // USE STRICT
     "use strict";
+    try {
 
-    $.post("action.php", {
-            type: "dashboard",
-            chart: "pie-chart"
+        $.post("action.php", {
+                type: "dashboard",
+                chart: "pie-chart"
 
-        },
-        function(data, status) {
-            var obj_pie = JSON.parse(data);
-            console.log(obj_pie);
+            },
+            function(data, status) {
+                var obj_pie = JSON.parse(data);
+                console.log(obj_pie);
 
-            try {
 
                 //pie chart
                 var ctx = document.getElementById("pieChart");
@@ -1089,16 +1089,16 @@
     } catch (error) {
         console.log(error);
     }
+    try {
 
-    $.post("action.php", {
-            type: "dashboard",
-            chart: "doughnut-chart"
+        $.post("action.php", {
+                type: "dashboard",
+                chart: "doughnut-chart"
 
-        },
-        function(data_doughnut, status) {
-            var obj_doughnut = JSON.parse(data_doughnut);
-            console.log(obj_doughnut);
-            try {
+            },
+            function(data_doughnut, status) {
+                var obj_doughnut = JSON.parse(data_doughnut);
+                console.log(obj_doughnut);
 
                 //doughnut chart
                 document.getElementById("doughnutChartTitle").innerHTML = obj_doughnut.title;
@@ -1190,16 +1190,17 @@
     } catch (error) {
         console.log(error);
     }
-    $.post("action.php", {
-            type: "dashboard",
-            chart: "bar-per-year"
+    try {
 
-        },
-        function(data_per_year, status) {
-            var obj_bar_per_year = JSON.parse(data_per_year);
-            console.log(obj_bar_per_year);
+        $.post("action.php", {
+                type: "dashboard",
+                chart: "bar-per-year"
 
-            try {
+            },
+            function(data_per_year, status) {
+                var obj_bar_per_year = JSON.parse(data_per_year);
+                console.log(obj_bar_per_year);
+
 
                 // single bar chart
                 document.getElementById("BarPerYear").innerHTML = obj_bar_per_year.title;
