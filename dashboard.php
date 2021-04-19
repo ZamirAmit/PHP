@@ -134,7 +134,7 @@
         //$obj = json_encode($data, JSON_UNESCAPED_UNICODE );
         return $data;
     }
-    function get_doughut_chart(){
+    function get_dounut_chart(){
       
         $servername = "bgmndrlz7ef9djdqxyfg-mysql.services.clever-cloud.com";
         $username = "uuibjej9e6w3n7as";
