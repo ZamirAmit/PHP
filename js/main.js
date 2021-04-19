@@ -1100,9 +1100,9 @@
             console.log(obj_dounut);
             try {
 
-                //doughut chart
-                document.getElementById("doughutChartTitle").innerHTML = obj_dounut.title;
-                var ctx = document.getElementById("doughutChart");
+                //doughnut chart
+                document.getElementById("doughnutChartTitle").innerHTML = obj_dounut.title;
+                var ctx = document.getElementById("doughnutChart");
                 if (ctx) {
                     ctx.height = 150;
                     var myChart = new Chart(ctx, {
