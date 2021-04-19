@@ -8,8 +8,8 @@
                 chart: "pie-chart"
 
             },
-            function(data, status) {
-                var obj_pie = JSON.parse(data);
+            function(data_pie, status) {
+                var obj_pie = JSON.parse(data_pie);
 
 
 
