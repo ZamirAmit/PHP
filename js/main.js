@@ -3,8 +3,9 @@
     "use strict";
 
     $.post("action.php", {
-            chart: "pie-chart",
-            type: "dashboard"
+            type: "dashboard",
+            chart: "pie-chart"
+
         },
         function(data, status) {
             var obj_pie = JSON.parse(data);
@@ -387,7 +388,7 @@
         if (ctx) {
             ctx.height = 280;
             var myChart = new Chart(ctx, {
-                type: 'doughnut',
+                type: 'dounut',
                 data: {
                     datasets: [{
                         label: "My First dataset",
@@ -670,7 +671,7 @@
         if (ctx) {
             ctx.height = 209;
             var myChart = new Chart(ctx, {
-                type: 'doughnut',
+                type: 'dounut',
                 data: {
                     datasets: [{
                         label: "My First dataset",
@@ -1090,25 +1091,25 @@
     }
 
     $.post("action.php", {
+            type: "dashboard",
+            chart: "dounut-chart"
 
-            chart: "doughnut-chart",
-            type: "dashboard"
         },
-        function(data_doughnut, status) {
-            var obj_doughnut = JSON.parse(data_doughnut);
-            console.log(obj_doughnut);
+        function(data_dounut, status) {
+            var obj_dounut = JSON.parse(data_dounut);
+            console.log(obj_dounut);
             try {
 
-                //doughnut chart
-                document.getElementById("doughnutChartTitle").innerHTML = obj_doughnut.title;
-                var ctx = document.getElementById("doughnutChart");
+                //dounut chart
+                document.getElementById("dounutChartTitle").innerHTML = obj_dounut.title;
+                var ctx = document.getElementById("dounutChart");
                 if (ctx) {
                     ctx.height = 150;
                     var myChart = new Chart(ctx, {
-                        type: 'doughnut',
+                        type: 'dounut',
                         data: {
                             datasets: [{
-                                data: obj_doughnut.data.values,
+                                data: obj_dounut.data.values,
                                 backgroundColor: [
                                     "rgba(0, 123, 255,0.9)",
                                     "rgba(0, 123, 255,0.7)",
@@ -1123,7 +1124,7 @@
                                 ]
 
                             }],
-                            labels: obj_doughnut.data.labels
+                            labels: obj_dounut.data.labels
                         },
                         options: {
                             legend: {
@@ -1190,9 +1191,9 @@
         console.log(error);
     }
     $.post("action.php", {
+            type: "dashboard",
+            chart: "bar-per-year"
 
-            chart: "bar-per-year",
-            type: "dashboard"
         },
         function(data_per_year, status) {
             var obj_bar_per_year = JSON.parse(data_per_year);
