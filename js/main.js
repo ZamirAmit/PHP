@@ -1089,6 +1089,63 @@
         console.log(error);
     }
 
+    $.post("action.php", {
+
+            chart: "doughnut-chart",
+            type: "dashboard"
+        },
+        function(data_doughnut, status) {
+            var obj_doughnut = JSON.parse(data_doughnut);
+            console.log(obj_doughnut);
+            try {
+
+                //doughnut chart
+                document.getElementById("doughnutChartTitle").innerHTML = obj_doughnut.title;
+                var ctx = document.getElementById("doughnutChart");
+                if (ctx) {
+                    ctx.height = 150;
+                    var myChart = new Chart(ctx, {
+                        type: 'doughnut',
+                        data: {
+                            datasets: [{
+                                data: obj_doughnut.data.values,
+                                backgroundColor: [
+                                    "rgba(0, 123, 255,0.9)",
+                                    "rgba(0, 123, 255,0.7)",
+                                    "rgba(0, 123, 255,0.5)",
+                                    "rgba(0,0,0,0.07)"
+                                ],
+                                hoverBackgroundColor: [
+                                    "rgba(0, 123, 255,0.9)",
+                                    "rgba(0, 123, 255,0.7)",
+                                    "rgba(0, 123, 255,0.5)",
+                                    "rgba(0,0,0,0.07)"
+                                ]
+
+                            }],
+                            labels: obj_doughnut.data.labels
+                        },
+                        options: {
+                            legend: {
+                                position: 'top',
+                                labels: {
+                                    fontFamily: 'Poppins'
+                                }
+
+                            },
+                            responsive: true
+                        }
+                    });
+                }
+
+
+            } catch (error) {
+                console.log(error);
+            }
+
+        });
+
+
     try {
 
         // polar chart

@@ -27,7 +27,7 @@ try {
             $response["title"] = date_format(date_create($data["title"]),"Y") . " הוצאות בשנת";
     
         }else{
-            $response["chart_error"] =  $char . " Is not recognized chart!";
+            $response["chart_error"] =  $chart . " Is not recognized chart!";
         }
         
     }else{
