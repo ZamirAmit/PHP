@@ -11,7 +11,7 @@
             function(data_pie, status) {
                 var obj_pie = JSON.parse(data_pie);
 
-
+                document.getElementById("pieChartTitle").innerHTML = obj_pie.title;
                 //pie chart
                 var ctx = document.getElementById("pieChart");
                 if (ctx) {
