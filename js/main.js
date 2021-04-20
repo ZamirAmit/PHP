@@ -20,36 +20,21 @@
                     ctx.height = 200;
                     var myChart = new Chart(ctx, {
                         type: 'pie',
-                        data: {
-                            datasets: [{
-                                data: obj_pie.data.values,
-                                backgroundColor: [
-                                    "rgba(0, 123, 255,0.9)",
-                                    "rgba(0, 123, 255,0.7)",
-                                    "rgba(0, 123, 255,0.5)",
-                                    "rgba(0,0,0,0.07)"
-                                ],
-                                hoverBackgroundColor: [
-                                    "rgba(0, 123, 255,0.9)",
-                                    "rgba(0, 123, 255,0.7)",
-                                    "rgba(0, 123, 255,0.5)",
-                                    "rgba(0,0,0,0.07)"
-                                ]
-
-                            }],
-                            labels: obj_pie.data.labels
-                        },
+                        data: obj_pie.data.values,
                         options: {
-                            legend: {
-                                position: 'top',
-                                labels: {
-                                    fontFamily: 'Poppins'
+                            responsive: true,
+                            plugins: {
+                                legend: {
+                                    position: 'top',
+                                },
+                                title: {
+                                    display: true,
+                                    text: 'Chart.js Pie Chart'
                                 }
+                            }
+                        },
 
-                            },
-                            responsive: true
-                        }
-                    });
+                    }); ///////
                 }
                 console.log(obj_pie);
             });
