@@ -20,7 +20,7 @@
                         type: 'pie',
                         data: {
                             datasets: [{
-                                data: data_pie.data.values,
+                                data: obj_pie.data.values,
                                 backgroundColor: [
                                     "rgba(0, 123, 255,0.9)",
                                     "rgba(0, 123, 255,0.7)",
@@ -35,7 +35,7 @@
                                 ]
 
                             }],
-                            labels: data_pie.dat.labels
+                            labels: obj_pie.dat.labels
                         },
                         options: {
                             legend: {
