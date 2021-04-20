@@ -1111,7 +1111,7 @@
                 console.log(obj_doughnut);
 
                 //doughnut chart
-                document.getElementById("doughnutChartTitle").innerHTML = obj_doughnut.title;
+                //document.getElementById("doughnutChartTitle").innerHTML = obj_doughnut.title;
                 var ctx = document.getElementById("doughnutChart");
                 if (ctx) {
                     ctx.height = 150;
