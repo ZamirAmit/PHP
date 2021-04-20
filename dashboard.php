@@ -1,11 +1,12 @@
 <?php
 
+    $servername = "bgmndrlz7ef9djdqxyfg-mysql.services.clever-cloud.com";
+    $username = "uuibjej9e6w3n7as";
+    $password = "yM1BD2Cw46IRCe89uYls";
+    $dbname = "bgmndrlz7ef9djdqxyfg";
+    
     function get_bar_chart_per_year(){
-       
-        $servername = "bgmndrlz7ef9djdqxyfg-mysql.services.clever-cloud.com";
-        $username = "uuibjej9e6w3n7as";
-        $password = "yM1BD2Cw46IRCe89uYls";
-        $dbname = "bgmndrlz7ef9djdqxyfg";
+        global $servername, $username, $password, $dbname;
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
         $data = array();
@@ -68,11 +69,7 @@
     }
 
     function get_pie_chart(){
-
-        $servername = "bgmndrlz7ef9djdqxyfg-mysql.services.clever-cloud.com";
-        $username = "uuibjej9e6w3n7as";
-        $password = "yM1BD2Cw46IRCe89uYls";
-        $dbname = "bgmndrlz7ef9djdqxyfg";
+        global $servername, $username, $password, $dbname;
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
         $data = array();
@@ -135,11 +132,7 @@
         return $data;
     }
     function get_doughnut_chart(){
-      
-        $servername = "bgmndrlz7ef9djdqxyfg-mysql.services.clever-cloud.com";
-        $username = "uuibjej9e6w3n7as";
-        $password = "yM1BD2Cw46IRCe89uYls";
-        $dbname = "bgmndrlz7ef9djdqxyfg";
+        global $servername, $username, $password, $dbname;
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
         $data = array();
