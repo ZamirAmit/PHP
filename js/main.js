@@ -919,52 +919,61 @@
     }
 
     try {
-        //bar chart
-        document.getElementById("barChartTitle").innerHTML = "";
-        var ctx = document.getElementById("barChart");
-        if (ctx) {
-            ctx.height = 200;
-            var myChart = new Chart(ctx, {
-                type: 'bar',
-                defaultFontFamily: 'Poppins',
-                data: {
-                    labels: ["amit", "ravid", "pinto", "daran"],
-                    datasets: [{
-                            data: [1, 2, 3, 4],
-                            borderColor: "rgba(0, 123, 255, 0.9)",
-                            borderWidth: "0",
-                            backgroundColor: "rgba(0, 123, 255, 0.5)",
-                            fontFamily: "Poppins"
-                        }
+        $.post("action.php", {
+                type: "dashboard",
+                chart: "bar-per-year"
 
-                    ]
-                },
-                options: {
-                    legend: {
-                        position: 'top',
-                        labels: {
-                            fontFamily: 'Poppins'
-                        }
+            },
+            function(data_per_year, status) {
+                var obj_bar_per_year = JSON.parse(data_per_year);
+                console.log(obj_bar_per_year);
 
-                    },
-                    scales: {
-                        xAxes: [{
-                            ticks: {
-                                fontFamily: "Poppins"
+                //bar chart
+                document.getElementById("barChartTitle").innerHTML = "";
+                var ctx = document.getElementById("barChart");
+                if (ctx) {
+                    ctx.height = 200;
+                    var myChart = new Chart(ctx, {
+                        type: 'bar',
+                        defaultFontFamily: 'Poppins',
+                        data: {
+                            labels: obj_bar_per_year.data.labels,
+                            datasets: [{
+                                    data: obj_bar_per_year.data.values,
+                                    borderColor: "rgba(0, 123, 255, 0.9)",
+                                    borderWidth: "0",
+                                    backgroundColor: "rgba(0, 123, 255, 0.5)",
+                                    fontFamily: "Poppins"
+                                }
 
+                            ]
+                        },
+                        options: {
+                            legend: {
+                                position: 'top',
+                                labels: {
+                                    fontFamily: 'Poppins'
+                                }
+
+                            },
+                            scales: {
+                                xAxes: [{
+                                    ticks: {
+                                        fontFamily: "Poppins"
+
+                                    }
+                                }],
+                                yAxes: [{
+                                    ticks: {
+                                        beginAtZero: true,
+                                        fontFamily: "Poppins"
+                                    }
+                                }]
                             }
-                        }],
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero: true,
-                                fontFamily: "Poppins"
-                            }
-                        }]
-                    }
+                        }
+                    });
                 }
             });
-        }
-
 
     } catch (error) {
         console.log(error);
