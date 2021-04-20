@@ -35,7 +35,7 @@
                                 ]
 
                             }],
-                            labels: obj_pie.dat.labels
+                            labels: obj_pie.data.labels
                         },
                         options: {
                             legend: {
