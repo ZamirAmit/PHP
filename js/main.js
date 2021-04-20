@@ -929,7 +929,7 @@
                 console.log(obj_bar_per_year);
 
                 //bar chart
-                document.getElementById("barChartTitle").innerHTML = "";
+                document.getElementById("barChartTitle").innerHTML = obj_bar_per_year.title;
                 var ctx = document.getElementById("barChart");
                 if (ctx) {
                     ctx.height = 200;
