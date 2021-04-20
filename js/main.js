@@ -387,7 +387,7 @@
         if (ctx) {
             ctx.height = 280;
             var myChart = new Chart(ctx, {
-                type: 'doughnut',
+                type: 'pie',
                 data: {
                     datasets: [{
                         label: "My First dataset",
