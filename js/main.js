@@ -928,7 +928,7 @@
                 type: 'bar',
                 defaultFontFamily: 'Poppins',
                 data: {
-                    labels: ["a", "b", "c", "d"],
+                    labels: ["amit", "ravid", "pinto", "daran"],
                     datasets: [{
                             data: [1, 2, 3, 4],
                             borderColor: "rgba(0, 123, 255, 0.9)",
