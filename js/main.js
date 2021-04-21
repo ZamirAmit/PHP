@@ -1135,11 +1135,11 @@
                     });
                 }
                 document.getElementById("doughnutChartTitle").innerHTML = obj_doughnut.title;
-                var ctx = document.getElementById("doughnutChart");
+                var dtx = document.getElementById("doughnutChart");
 
                 if (dtx) {
                     dtx.height = 150;
-                    var myChart = new Chart(ctx, {
+                    var myChart = new Chart(dtx, {
                         type: 'doughnut',
                         data: {
                             datasets: [{
