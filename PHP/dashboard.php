@@ -154,7 +154,8 @@
                             "WHERE `daily_expances`.`date` >= (SELECT `date_picker`.`DateStart` FROM `date_picker`) " . 
                             "AND `daily_expances`.`date` <= (SELECT `date_picker`.`DateEnd` FROM `date_picker`) " . 
                             "GROUP BY `daily_expances`.`id_type` ) " . 
-                            "a on a.`id_type` = `types`.`id_type`";
+                            "a on a.`id_type` = `types`.`id_type`" .
+                            "ORDER BY a.amount DESC";
 
         $types = array();
         $amount = array();

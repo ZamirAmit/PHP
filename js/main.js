@@ -1093,7 +1093,6 @@
             function(data_doughnut, status) {
                 var obj_doughnut = JSON.parse(data_doughnut);
                 console.log(obj_doughnut);
-
                 //doughnut chart
                 document.getElementById("doughnutChartTitleModal").innerHTML = obj_doughnut.title;
                 var ctx = document.getElementById("doughnutChartModal");
@@ -1122,6 +1121,47 @@
 
                             }],
                             labels: obj_doughnut.data.labels
+                        },
+                        options: {
+                            legend: {
+                                position: 'right',
+                                labels: {
+                                    fontFamily: 'Poppins'
+                                }
+
+                            },
+                            responsive: true
+                        }
+                    });
+                }
+                document.getElementById("doughnutChartTitle").innerHTML = obj_doughnut.title;
+                var ctx = document.getElementById("doughnutChart");
+
+                if (dtx) {
+                    dtx.height = 150;
+                    var myChart = new Chart(ctx, {
+                        type: 'doughnut',
+                        data: {
+                            datasets: [{
+                                data: obj_doughnut.data.values.slice(5),
+
+                                backgroundColor: [
+                                    "rgba(0, 123, 255,1)",
+                                    "rgba(0, 123, 255,0.9)",
+                                    "rgba(0, 123, 255,0.7)",
+                                    "rgba(0, 123, 255,0.5)",
+                                    "rgba(0, 123, 255,0.3)",
+                                    "rgba(0, 123, 255,0.3)"
+                                ],
+                                hoverBackgroundColor: [
+                                    "rgba(0, 123, 255,0.9)",
+                                    "rgba(0, 123, 255,0.7)",
+                                    "rgba(0, 123, 255,0.5)",
+                                    "rgba(0,0,0,0.07)"
+                                ]
+
+                            }],
+                            labels: obj_doughnut.data.labels.slice(5)
                         },
                         options: {
                             legend: {
