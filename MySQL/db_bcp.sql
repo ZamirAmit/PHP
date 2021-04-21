@@ -1,49 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 4.8.4
--- https://www.phpmyadmin.net/
---
--- Host: bgmndrlz7ef9djdqxyfg-mysql.services.clever-cloud.com:3306
--- Generation Time: Apr 20, 2021 at 05:09 PM
--- Server version: 8.0.22-13
--- PHP Version: 7.2.34
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `bgmndrlz7ef9djdqxyfg`
---
-
-DELIMITER $$
---
--- Procedures
---
-CREATE DEFINER=`uuibjej9e6w3n7as`@`%` PROCEDURE `create_tables_for_db` ()  create table types as
-    select  @rownum := @rownum + 1 as id_type,
-            t.`type` as type_desc
-    from (SELECT DISTINCT `type` FROM `TABLE 3`) t
-    cross join (select @rownum := 100) r
-    order by t.`type`$$
-
-CREATE DEFINER=`uuibjej9e6w3n7as`@`%` PROCEDURE `create_table_dailye` ()  MODIFIES SQL DATA
-CREATE TABLE  daily_expances as
- select @rownum := @rownum + 1 as id_expance, b.* from (SELECT a.date, a.UserID, `types`.`id_type`, a.sum FROM `types` LEFT JOIN ( SELECT `TABLE 3`.`date`, `users`.`UserID`,`TABLE 3`.`type`,`TABLE 3`.`sum` FROM `TABLE 3` LEFT JOIN `users` ON `users`.`UserName` = `TABLE 3`.`user` ) a ON a.type = `types`.`type_desc`) b cross join (select @rownum := 1000) r$$
-
-DELIMITER ;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `daily_expances`
---
 
 CREATE TABLE `daily_expances` (
   `id_expance` double DEFAULT NULL,
@@ -881,8 +835,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`UserID`, `UserName`, `UserEmail`) VALUES
 (1, 'רביד', 'shataach.ravid@gmail.com'),
 (2, 'עמית', 'zamir.amit@gmail.com');
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
