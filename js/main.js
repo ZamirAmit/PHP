@@ -1103,13 +1103,15 @@
                         type: 'doughnut',
                         data: {
                             datasets: [{
-                                data: obj_doughnut.data.values
-                                    /*
+                                data: obj_doughnut.data.values,
+
                                 backgroundColor: [
+                                    "rgba(0, 123, 255,1)",
                                     "rgba(0, 123, 255,0.9)",
                                     "rgba(0, 123, 255,0.7)",
                                     "rgba(0, 123, 255,0.5)",
-                                    "rgba(0,0,0,0.07)"
+                                    "rgba(0, 123, 255,0.3)",
+                                    "rgba(0, 123, 255,0.3)"
                                 ],
                                 hoverBackgroundColor: [
                                     "rgba(0, 123, 255,0.9)",
@@ -1117,7 +1119,7 @@
                                     "rgba(0, 123, 255,0.5)",
                                     "rgba(0,0,0,0.07)"
                                 ]
-*/
+
                             }],
                             labels: obj_doughnut.data.labels
                         },
