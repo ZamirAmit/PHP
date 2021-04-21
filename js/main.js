@@ -1095,8 +1095,8 @@
                 console.log(obj_doughnut);
 
                 //doughnut chart
-                //document.getElementById("doughnutChartTitle").innerHTML = obj_doughnut.title;
-                var ctx = document.getElementById("doughnutChart");
+                document.getElementById("doughnutChartTitleModal").innerHTML = obj_doughnut.title;
+                var ctx = document.getElementById("doughnutChartModal");
                 if (ctx) {
                     ctx.height = 150;
                     var myChart = new Chart(ctx, {
