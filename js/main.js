@@ -3,7 +3,7 @@
     "use strict";
     try {
 
-        $.post("action.php", {
+        $.post("PHP/action.php", {
                 type: "dashboard",
                 chart: "pie-chart"
 
@@ -917,7 +917,7 @@
     }
 
     try {
-        $.post("action.php", {
+        $.post("PHP/action.php", {
                 type: "dashboard",
                 chart: "bar-per-year"
 
@@ -1085,7 +1085,7 @@
     }
     try {
 
-        $.post("action.php", {
+        $.post("PHP/action.php", {
                 type: "dashboard",
                 chart: "doughnut-chart"
 
@@ -1186,7 +1186,7 @@
     }
     try {
 
-        $.post("action.php", {
+        $.post("PHP/action.php", {
                 type: "dashboard",
                 chart: "bar-per-year"
 
