@@ -1,9 +1,9 @@
 <?php
 
-    $servername = "bsfxjmyi7abzrvoclcev-mysql.services.clever-cloud.com";
-    $username = "ubi9huebninamk34";
-    $password = "S0AN55XAst1oOpNDsShI";
-    $dbname = "bsfxjmyi7abzrvoclcev";
+    $servername = "btbqk6bbzfjow7syckrx-mysql.services.clever-cloud.com";
+    $dbname = "btbqk6bbzfjow7syckrx";
+    $username = "uukm5qqwcretsghr";
+    $password = "6ivSmTKUip0UzGR64Qh6";
     
     function get_bar_chart_per_year(){
         global $servername, $username, $password, $dbname;
