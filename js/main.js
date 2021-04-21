@@ -1125,7 +1125,7 @@
                         },
                         options: {
                             legend: {
-                                position: 'top',
+                                position: 'right',
                                 labels: {
                                     fontFamily: 'Poppins'
                                 }
