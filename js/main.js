@@ -1136,7 +1136,14 @@
                 }
                 document.getElementById("doughnutChartTitle").innerHTML = obj_doughnut.title;
                 var dtx = document.getElementById("doughnutChart");
+                r = 100;
+                g = 299;
+                b = 133;
+                a = 1;
+                color_item = "rgba(" + r + "," + g + "," + b + ","
+                a + ")";
 
+                a = 2.
                 if (dtx) {
                     dtx.height = 150;
                     var myChart = new Chart(dtx, {
@@ -1146,7 +1153,7 @@
                                 data: obj_doughnut.data.values.slice(5),
 
                                 backgroundColor: [
-                                    "rgba(0, 123, 255,1)",
+                                    color_item,
                                     "rgba(0, 123, 255,0.9)",
                                     "rgba(0, 123, 255,0.7)",
                                     "rgba(0, 123, 255,0.5)",
